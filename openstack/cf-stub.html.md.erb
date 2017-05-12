@@ -213,6 +213,11 @@ Run <code>generate-loggregator-certs CA_CERT CA_KEY</code> to generate the certi
     For example, run the following in a terminal window:
     <pre class=terminal>$ ./scripts/generate-loggregator-certs cf-ca.cert cf-ca.key</pre>
     This script outputs a directory named <code>loggregator-certs</code> that contains a set of files with the certificates and keys you need for Loggregator.
+    <br>
+    For the statsd certificates, you should run the following script in a terminal:
+    <pre class=terminal>$ ./scripts/generate-statsd-injector-certs loggregator-ca.crt loggregator-ca.key</pre>
+    This script outputs a directory named <code>statds-injector-certs</code> that contains a set of files with the certificates and keys you need for statsd.
+
 
       <table>
         <tr>
@@ -254,6 +259,14 @@ Run <code>generate-loggregator-certs CA_CERT CA_KEY</code> to generate the certi
         <tr>
           <td><code>LOGGREGATOR_SYSLOGDRAINBINDER_KEY</code></td>
           <td><code>syslogdrainbinder.key</code></td>
+        </tr>
+        <tr>
+          <td><code>LOGGREGATOR_STATSDINJECTOR_CERT</code></td>
+          <td><code>statsdinjector.crt</code></td>
+        </tr>
+        <tr>
+          <td><code>LOGGREGATOR_STATSDINJECTOR_KEY</code></td>
+          <td><code>statsdinjector.key</code></td>
         </tr>
       </table>
     </td>
